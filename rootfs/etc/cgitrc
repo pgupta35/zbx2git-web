@@ -1,0 +1,43 @@
+# /etc/cgitrc
+
+virtual-root=/
+source-filter=/usr/lib/cgit/filters/syntax-highlighting.sh
+root-title=zbx2git
+root-desc=Zabbix Configuration Versioning Manager
+noplainemail=1
+css=/cgit.css
+logo=/cgit.png
+favicon=/favicon.ico
+# don't index site
+robots=noindex, nofollow
+
+# Cache
+cache-size=5000
+cache-dynamic-ttl=60
+cache-static-ttl=120
+cache-root-ttl=5
+cache-repo-ttl=120
+cache-root=/var/cache/cgit
+# No Cache
+#nocache=1
+#cache-size=0
+
+# Styling
+enable-index-links=1
+enable-index-owner=0
+enable-log-filecount=1
+enable-log-linecount=1
+enable-commit-graph=1
+enable-git-config=1
+
+max-stats=year
+max-commit-count=200
+max-message-length=500
+#side-by-side-diffs=1
+
+# Rpositories
+max-repo-count=200
+repository-sort=age
+snapshots=tar.gz zip
+scan-path=/git/
+
